@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": 1234,
+      "title": "Samsung Galaxy S21",
+      "img": "/img/Galaxy_S21.jpg",
+      "uploadedImg": "https://i.ibb.co/vDnRqLC/Galaxy-S21.jpg",
+      "price": 222772,
+      "quantity": 1
+    },
+    {
+      "id": 1235,
+      "title": "Apple iPhone X",
+      "img": "/img/IphoneX.webp",
+      "uploadedImg": "https://i.ibb.co/MnQCWRN/IphoneX.webp",
+      "price": 158000,
+      "quantity": 1
+    },
+    {
+      "id": 1236,
+      "title": "LG K11",
+      "img": "/img/LG_K11.jpg",
+      "uploadedImg": "https://i.ibb.co/J3Hrhvb/LG-K11.jpg",
+      "price": 39999,
+      "quantity": 1
+    },
+    {
+      "id": 1237,
+      "title": "Motorola Razr",
+      "img": "/img/Motorola_Razr.jpg",
+      "uploadedImg": "https://i.ibb.co/4fZTqdj/Motorola-Razr.jpg",
+      "price": 80000,
+      "quantity": 1
+    },
+    {
+      "id": 1238,
+      "title": "Huawei Nexus 6P",
+      "img": "/img/Nexus_6P.jpg",
+      "uploadedImg": "https://i.ibb.co/CBpggwq/Nexus-6P.jpg",
+      "price": 20000,
+      "quantity": 1
+    },
+    {
+      "id": 1239,
+      "title": "Xiaomi MI 10T Pro",
+      "img": "/img/Xiaomi_MI_10T_Pro.jpg",
+      "uploadedImg": "https://i.ibb.co/gMSfVXJ/Xiaomi-MI-10-T-Pro.jpg",
+      "price": 212468,
+      "quantity": 1
+    }
+  ]
+}
