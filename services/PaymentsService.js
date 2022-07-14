@@ -36,9 +36,21 @@ class PaymentService {
       ],
       external_reference: "test_user_63274575@testuser.com",
       back_urls: {
-        failure: "http://localhost:3000/failure_payment",
-        pending: "http://localhost:3000/pending_payment",
-        success: "http://localhost:3000/success_payment",
+        failure: `${
+          process.env.NODE_ENV === "dev"
+            ? "http://localhost:3000/failure_payment"
+            : "https://beckman924-ecommerce-mp-checkout.vercel.app/failure_payment"
+        }`,
+        pending: `${
+          process.env.NODE_ENV === "dev"
+            ? "http://localhost:3000/failure_payment"
+            : "https://beckman924-ecommerce-mp-checkout.vercel.app/pending_payment"
+        }`,
+        success: `${
+          process.env.NODE_ENV === "dev"
+            ? "http://localhost:3000/failure_payment"
+            : "https://beckman924-ecommerce-mp-checkout.vercel.app/success_payment"
+        }`,
       },
       total_amount: price,
       auto_return: "approved",
