@@ -1,6 +1,6 @@
-const { ApprovedBuy } = require("../../controllers/NotificationsController");
 export default function handler(req, res) {
   if (req.method === "POST") {
-    ApprovedBuy(req, res);
+    const response = req.body;
+    res.status(200).json(response);
   }
 }

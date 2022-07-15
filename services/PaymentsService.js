@@ -54,11 +54,14 @@ class PaymentService {
       },
       total_amount: price,
       auto_return: "approved",
+      notification_url:
+        "https://beckman924-ecommerce-mp-checkout.vercel.app/api/notifications",
     };
 
     const payment = await axios.post(url, body, {
       headers: {
         "Content-Type": "application/json",
+        "x-integrator-id": "dev_24c65fb163bf11ea96500242ac130004",
         Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       },
     });
