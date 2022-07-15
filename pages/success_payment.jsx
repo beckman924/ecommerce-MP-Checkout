@@ -1,17 +1,9 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { useRouter } from "next/router";
 import { ShoppingBag } from "@styled-icons/heroicons-outline/ShoppingBag";
 import { Checkmark } from "@styled-icons/evaicons-solid/Checkmark";
 
 function Success_payment() {
-  useEffect(() => {
-    const getBuyResponse = async () => {
-      const data = await axios.post("/api/notifications");
-      console.log(data);
-    };
-    getBuyResponse();
-  }, []);
 
   const router = useRouter();
   const { payment_id, external_reference, payment_type } = router.query;
