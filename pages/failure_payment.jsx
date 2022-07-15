@@ -21,7 +21,7 @@ function Failure_payment() {
               Ocurrió un problema con tu pago
             </h1>
 
-            {payment_id === null ? null : (
+            {payment_id == null ? null : (
               <h3 className="text-[#F2FAF6]">Operación: {payment_id}</h3>
             )}
           </div>
@@ -30,7 +30,7 @@ function Failure_payment() {
             <div className="shadow-2xl rounded-md ring-1 ring-gray-200 w-[20rem] h-[7rem] bg-[#FFFFFF] flex flex-col justify-center items-center">
               <h2 className="font-medium">Email comprador:</h2>
               <h3 className="font-extralight">{external_reference}</h3>
-              {payment_type === null ? (
+              {payment_type == null ? (
                 <h2 className="font-medium">
                   Cancelaste la compra antes de finalizarla
                 </h2>
