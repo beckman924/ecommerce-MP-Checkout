@@ -7,7 +7,7 @@ import { Checkmark } from "@styled-icons/evaicons-solid/Checkmark";
 function Success_payment() {
   useEffect(() => {
     const getBuyResponse = async () => {
-      const data = await axios.post("/api/notifications");
+      const data = await axios.get("/api/notifications");
       console.log(data);
     };
     getBuyResponse();

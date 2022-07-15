@@ -20,19 +20,30 @@ function Failure_payment() {
             <h1 className="font-medium text-white text-2xl">
               Ocurrió un problema con tu pago
             </h1>
-            <h3 className="text-[#F2FAF6]">Operación: {payment_id}</h3>
+
+            {payment_id === null ? null : (
+              <h3 className="text-[#F2FAF6]">Operación: {payment_id}</h3>
+            )}
           </div>
 
           <div className="z-10 grid place-content-center gap-3">
             <div className="shadow-2xl rounded-md ring-1 ring-gray-200 w-[20rem] h-[7rem] bg-[#FFFFFF] flex flex-col justify-center items-center">
               <h2 className="font-medium">Email comprador:</h2>
               <h3 className="font-extralight">{external_reference}</h3>
-              <h2 className="font-medium">Intentaste pagar con:</h2>
-              <h3 className="font-extralight">
-                {payment_type === "credit_card"
-                  ? "Tarjeta de crédito"
-                  : payment_type}
-              </h3>
+              {payment_type === null ? (
+                <h2 className="font-medium">
+                  Cancelaste la compra antes de finalizarla
+                </h2>
+              ) : (
+                <>
+                  <h2 className="font-medium">Intentaste pagar con:</h2>
+                  <h3 className="font-extralight">
+                    {payment_type === "credit_card"
+                      ? "Tarjeta de crédito"
+                      : payment_type}
+                  </h3>
+                </>
+              )}
             </div>
             <button
               className="bg-[#009EE3] rounded-md text-white font-medium py-2 transition-all active:scale-90"
