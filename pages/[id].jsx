@@ -5,8 +5,10 @@ const { data } = require("../data/smartphones.json");
 import axios from "axios";
 import { ArrowBackCircle } from "@styled-icons/ionicons-sharp/ArrowBackCircle";
 import { Spinner5 } from "@styled-icons/icomoon/Spinner5";
+import useSecurityScript from "../hooks/useSecurityScript";
 
 function Smartphone() {
+  useSecurityScript("item");
   const router = useRouter();
   const [loader, setLoader] = useState(false);
   const { id } = router.query;
@@ -19,7 +21,7 @@ function Smartphone() {
       uploadedImg: smartphoneData[0].uploadedImg,
       price: smartphoneData[0].price,
     });
-    
+
     router.push(data.data.init_point);
   };
 

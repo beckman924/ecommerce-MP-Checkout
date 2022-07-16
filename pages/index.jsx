@@ -3,8 +3,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import style from "../styles/index.module.css";
 const { data } = require("../data/smartphones.json");
+import useSecurityScript from "../hooks/useSecurityScript";
 
 export default function Home() {
+  useSecurityScript("home");
   const router = useRouter();
   return (
     <div>

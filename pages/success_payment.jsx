@@ -4,7 +4,6 @@ import { ShoppingBag } from "@styled-icons/heroicons-outline/ShoppingBag";
 import { Checkmark } from "@styled-icons/evaicons-solid/Checkmark";
 
 function Success_payment() {
-
   const router = useRouter();
   const { payment_id, external_reference, payment_type } = router.query;
 
